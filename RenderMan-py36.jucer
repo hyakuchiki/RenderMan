@@ -110,7 +110,7 @@
       </MODULEPATHS>
     </VS2013>
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vst3Folder="VST3_SDK" extraCompilerFlags="-fPIC"
-                extraLinkerFlags="-shared -lpython3.6m -lboost_python3" cppLanguageStandard="-std=c++11">
+                extraLinkerFlags="-shared -lpython3.5m -lboost_python-py35" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="renderman"
                        headerPath="/fast-1/acids-env/include/python3.5m" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
