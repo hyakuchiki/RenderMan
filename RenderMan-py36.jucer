@@ -113,9 +113,9 @@
                 extraLinkerFlags="-shared -lpython3.6m -lboost_python3" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="renderman"
-                       headerPath="/fast-1/acids-env/bin/python"/>
+                       headerPath="/fast-1/acids-env/include/python3.5m" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="renderman"
-                       headerPath="/fast-1/acids-env/bin/python" libraryPath="/fast-1/acids-env/bin/python"/>
+                       headerPath="/fast-1/acids-env/include" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="JuceLibraryCode/modules"/>
