@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="EHAJpP" name="RenderMan" projectType="dll" version="1.0.0"
               bundleIdentifier="com.yourcompany.RenderMan" includeBinaryInAppConfig="1"
-              jucerVersion="5.3.0" displaySplashScreen="0" reportAppUsage="0"
+              jucerVersion="5.4.1" displaySplashScreen="0" reportAppUsage="0"
               splashScreenColour="Dark" cppLanguageStandard="11" companyCopyright="">
   <MAINGROUP id="tONOKg" name="RenderMan">
     <GROUP id="{4A809F36-0B47-21E3-7688-8CF65B68EF74}" name="Maximilian">
@@ -110,12 +110,12 @@
       </MODULEPATHS>
     </VS2013>
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vst3Folder="VST3_SDK" extraCompilerFlags="-fPIC"
-                extraLinkerFlags="-shared -lpython2.7 -lboost_python" cppLanguageStandard="-std=c++11">
+                extraLinkerFlags="-shared -lpython3.6m -lboost_python3" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="renderman"
-                       headerPath="/usr/include/python2.7"/>
+                       headerPath="/fast-1/acids-env/bin/python"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="renderman"
-                       headerPath="/usr/include/python2.7"/>
+                       headerPath="/fast-1/acids-env/bin/python" libraryPath="/fast-1/acids-env/bin/python"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="JuceLibraryCode/modules"/>
@@ -153,6 +153,6 @@
                JUCE_CHECK_MEMORY_LEAKS="0" JUCE_WEB_BROWSER="0"/>
   <LIVE_SETTINGS>
     <LINUX/>
-    <OSX/>
+    <OSX buildEnabled="1"/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>
