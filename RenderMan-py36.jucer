@@ -29,16 +29,16 @@
     <FILE id="PqgGm9" name="source.cpp" compile="1" resource="0" file="Source/source.cpp"/>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="VST3_SDK" extraLinkerFlags="-shared -lpython3.6m -lboost_python3"
+    <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="VST3_SDK" extraLinkerFlags="-shared -lpython3.7m -lboost_python37"
                extraCompilerFlags="-fPIC">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="librenderman.so"
-                       osxCompatibility="10.9 SDK" osxArchitecture="Native" headerPath="/usr/local/include&#10;/usr/local/include/python3.6"
-                       libraryPath="/usr/local/lib&#10;/usr/local/lib/python3.6/lib"
+                       osxCompatibility="10.9 SDK" osxArchitecture="Native" headerPath="/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/python3.7m&#10;/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/"
+                       libraryPath="/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/lib"
                        enablePluginBinaryCopyStep="1"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="librenderman.so"
-                       osxCompatibility="10.9 SDK" osxArchitecture="Native" headerPath="/usr/local/include&#10;/usr/local/include/python3.6&#10;"
-                       libraryPath="/usr/local/lib&#10;/usr/local/lib/python3.6/lib"
+                       osxCompatibility="10.9 SDK" osxArchitecture="Native" headerPath="/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/python3.7m&#10;/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/"
+                       libraryPath="/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/lib&#10;"
                        enablePluginBinaryCopyStep="1"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
@@ -112,7 +112,7 @@
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vst3Folder="VST3_SDK" extraCompilerFlags="-fPIC"
                 extraLinkerFlags="-shared -lpython3.5m -lboost_python-py35" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="renderman"
+        <CONFIGURATION name="Debug" isDebug="0" optimisation="1" targetName="renderman"
                        headerPath="/fast-1/acids-env/include/python3.5m" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="renderman"
                        headerPath="/fast-1/acids-env/include" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>

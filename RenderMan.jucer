@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="EHAJpP" name="RenderMan" projectType="dll" version="1.0.0"
               bundleIdentifier="com.yourcompany.RenderMan" includeBinaryInAppConfig="1"
-              jucerVersion="5.2.0" displaySplashScreen="0" reportAppUsage="0"
+              jucerVersion="5.4.1" displaySplashScreen="0" reportAppUsage="0"
               splashScreenColour="Dark" cppLanguageStandard="11" companyCopyright="">
   <MAINGROUP id="tONOKg" name="RenderMan">
     <GROUP id="{4A809F36-0B47-21E3-7688-8CF65B68EF74}" name="Maximilian">
@@ -29,15 +29,17 @@
     <FILE id="PqgGm9" name="source.cpp" compile="1" resource="0" file="Source/source.cpp"/>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="VST3_SDK" extraLinkerFlags="-shared -lpython2.7 -lboost_python"
+    <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="VST3_SDK" extraLinkerFlags="-shared -lpython2.7 -lboost_python27"
                extraCompilerFlags="-fPIC">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="librenderman.so"
-                       osxCompatibility="10.9 SDK" osxArchitecture="Native" headerPath="/usr/include/python2.7&#10;/usr/local/include&#10;"
-                       libraryPath="/usr/local/lib" enablePluginBinaryCopyStep="1"/>
+        <CONFIGURATION name="Debug" optimisation="1" targetName="librenderman.so" osxCompatibility="10.9 SDK"
+                       osxArchitecture="Native" headerPath="/usr/include/python2.7&#10;/usr/local/include&#10;"
+                       libraryPath="/usr/local/lib&#10;/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/patch/lib"
+                       enablePluginBinaryCopyStep="1" isDebug="0"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="librenderman.so"
                        osxCompatibility="10.9 SDK" osxArchitecture="Native" headerPath="/usr/include/python2.7&#10;/usr/local/include&#10;"
-                       libraryPath="/usr/local/lib" enablePluginBinaryCopyStep="1"/>
+                       libraryPath="/usr/local/lib&#10;/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/patch/lib"
+                       enablePluginBinaryCopyStep="1"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="JuceLibraryCode/modules"/>
@@ -147,10 +149,10 @@
     <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="1" useGlobalPath="0"/>
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="1" useGlobalPath="0"/>
   </MODULES>
-  <JUCEOPTIONS JUCE_PLUGINHOST_VST="enabled" JUCE_PLUGINHOST_VST3="enabled"
-               JUCE_PLUGINHOST_AU="enabled" JUCE_CHECK_MEMORY_LEAKS="disabled"
-               JUCE_WEB_BROWSER="disabled"/>
+  <JUCEOPTIONS JUCE_PLUGINHOST_VST="1" JUCE_PLUGINHOST_VST3="1" JUCE_PLUGINHOST_AU="1"
+               JUCE_CHECK_MEMORY_LEAKS="0" JUCE_WEB_BROWSER="0"/>
   <LIVE_SETTINGS>
     <LINUX/>
+    <OSX/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>
