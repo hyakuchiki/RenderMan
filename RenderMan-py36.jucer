@@ -112,8 +112,8 @@
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vst3Folder="VST3_SDK" extraCompilerFlags="-fPIC"
                 extraLinkerFlags="-shared -lpython3.5m -lboost_python-py35" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="0" optimisation="1" targetName="renderman"
-                       headerPath="/fast-1/acids-env/include/python3.5m" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
+        <CONFIGURATION name="Debug" isDebug="0" targetName="renderman" headerPath="/fast-1/acids-env/include/python3.5m"
+                       libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="renderman"
                        headerPath="/fast-1/acids-env/include" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
       </CONFIGURATIONS>

@@ -705,12 +705,12 @@
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
-				DEAD_CODE_STRIPPING = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_NDEBUG=1",
-					"NDEBUG=1",
+					"_DEBUG=1",
+					"DEBUG=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
 					"JUCE_APP_VERSION=1.0.0",
 					"JUCE_APP_VERSION_HEX=0x10000",
@@ -723,25 +723,22 @@
 					"JucePlugin_Build_Standalone=0",
 					"JucePlugin_Build_Unity=0",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"../../VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
-					"/usr/include/python2.7",
-					"/usr/local/include",
+					"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/python3.7m",
+					"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/",
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"/usr/local/lib\"",
-					"\"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/patch/lib\"",
+					"\"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/lib\"",
 				);
-				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = "-fPIC";
-				OTHER_LDFLAGS = "-shared -lpython2.7 -lboost_python27";
+				OTHER_LDFLAGS = "-shared -lpython3.7m -lboost_python37";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RenderMan;
 				PRODUCT_NAME = "librenderman.so";
 				USE_HEADERMAP = NO;
@@ -781,19 +778,18 @@
 					"../../VST3_SDK",
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
-					"/usr/include/python2.7",
-					"/usr/local/include",
+					"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/python3.7m",
+					"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/include/",
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"/usr/local/lib\"",
-					"\"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/patch/lib\"",
+					"\"/Users/naotake/.pyenv/versions/anaconda3-5.1.0/envs/music/lib\"",
 				);
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = "-fPIC";
-				OTHER_LDFLAGS = "-shared -lpython2.7 -lboost_python27";
+				OTHER_LDFLAGS = "-shared -lpython3.7m -lboost_python37";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RenderMan;
 				PRODUCT_NAME = "librenderman.so";
 				USE_HEADERMAP = NO;
@@ -824,6 +820,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_MODEL_TUNING = G5;
