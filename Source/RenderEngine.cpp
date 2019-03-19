@@ -159,30 +159,30 @@ void RenderEngine::fillAudioFeatures (const AudioSampleBuffer& data,
         // Save the audio for playback and plotting!
         processedMonoAudioPreview.push_back (currentFrame);
 
-        // RMS.
-        currentRmsFrame += (currentFrame * currentFrame);
+        // // RMS.
+        // currentRmsFrame += (currentFrame * currentFrame);
 
-        // Extract features.
-        if (fft.process (currentFrame))
-        {
-            // This isn't real-time so I can take the luxuary of allocating
-            // heap memory here.
-            double* mfccs = new double[13];
-            mfcc.mfcc (fft.magnitudes, mfccs);
+        // // Extract features.
+        // if (fft.process (currentFrame))
+        // {
+        //     // This isn't real-time so I can take the luxuary of allocating
+        //     // heap memory here.
+        //     double* mfccs = new double[13];
+        //     mfcc.mfcc (fft.magnitudes, mfccs);
 
-            std::array<double, 13> mfccsFrame;
-            std::memcpy (mfccsFrame.data(), mfccs, sizeof (double) * 13);
+        //     std::array<double, 13> mfccsFrame;
+        //     std::memcpy (mfccsFrame.data(), mfccs, sizeof (double) * 13);
 
-            // Add the mfcc frames here.
-            mfccFeatures.push_back (mfccsFrame);
-            delete[] mfccs;
+        //     // Add the mfcc frames here.
+        //     mfccFeatures.push_back (mfccsFrame);
+        //     delete[] mfccs;
 
-            // Root Mean Square.
-            currentRmsFrame /= fftSize;
-            currentRmsFrame = sqrt (currentRmsFrame);
-            rmsFrames.push_back (currentRmsFrame);
-            currentRmsFrame = 0.0;
-        }
+        //     // Root Mean Square.
+        //     currentRmsFrame /= fftSize;
+        //     currentRmsFrame = sqrt (currentRmsFrame);
+        //     rmsFrames.push_back (currentRmsFrame);
+        //     currentRmsFrame = 0.0;
+        // }
     }
 }
 
