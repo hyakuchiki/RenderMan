@@ -110,7 +110,7 @@
       </MODULEPATHS>
     </VS2013>
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vst3Folder="VST3_SDK" extraCompilerFlags="-fPIC"
-                extraLinkerFlags="-shared -lpython3.5m -lboost_python-py35" cppLanguageStandard="-std=c++11">
+                extraLinkerFlags="-shared -lpython3.7m -lboost_python-py37" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="0" targetName="renderman" headerPath="/home/ibalab/.conda/envs/patch/include/python3.7m"
                        libraryPath="/usr/local/lib&#10;/home/ibalab/.conda/envs/patch/lib"/>
