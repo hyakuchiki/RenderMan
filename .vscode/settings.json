@@ -11,5 +11,6 @@
         "string": "cpp",
         "system_error": "cpp",
         "vector": "cpp"
-    }
+    },
+    "C_Cpp.dimInactiveRegions": false
 }

@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="EHAJpP" name="RenderMan" projectType="dll" version="1.0.0"
               bundleIdentifier="com.yourcompany.RenderMan" includeBinaryInAppConfig="1"
-              jucerVersion="5.4.1" displaySplashScreen="0" reportAppUsage="0"
+              jucerVersion="5.4.4" displaySplashScreen="0" reportAppUsage="0"
               splashScreenColour="Dark" cppLanguageStandard="11" companyCopyright="">
   <MAINGROUP id="tONOKg" name="RenderMan">
     <GROUP id="{4A809F36-0B47-21E3-7688-8CF65B68EF74}" name="Maximilian">
@@ -112,10 +112,11 @@
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vst3Folder="VST3_SDK" extraCompilerFlags="-fPIC"
                 extraLinkerFlags="-shared -lpython3.5m -lboost_python-py35" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="0" targetName="renderman" headerPath="/fast-1/acids-env/include/python3.5m"
-                       libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
+        <CONFIGURATION name="Debug" isDebug="0" targetName="renderman" headerPath="/home/ibalab/.conda/envs/patch/include/python3.7m"
+                       libraryPath="/usr/local/lib&#10;/home/ibalab/.conda/envs/patch/lib"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="renderman"
-                       headerPath="/fast-1/acids-env/include" libraryPath="/usr/local/lib&#10;/fast-1/acids-env/lib"/>
+                       headerPath="/home/ibalab/.conda/envs/patch/include/python3.7m"
+                       libraryPath="/usr/local/lib&#10;/home/ibalab/.conda/envs/patch/lib"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="JuceLibraryCode/modules"/>
@@ -153,6 +154,6 @@
                JUCE_CHECK_MEMORY_LEAKS="0" JUCE_WEB_BROWSER="0"/>
   <LIVE_SETTINGS>
     <LINUX/>
-    <OSX buildEnabled="1"/>
+    <OSX buildEnabled="0"/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>
