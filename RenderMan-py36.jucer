@@ -112,11 +112,10 @@
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vst3Folder="VST3_SDK" extraCompilerFlags="-fPIC"
                 extraLinkerFlags="-shared -lpython3.7m -lboost_python-py37" cppLanguageStandard="-std=c++11">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="0" targetName="renderman" headerPath="/home/ibalab/.conda/envs/patch/include/python3.7m"
+        <CONFIGURATION name="Debug" isDebug="0" targetName="renderman" headerPath="/home/ibalab/.conda/envs/patch/include&#10;"
                        libraryPath="/home/ibalab/.conda/envs/patch/lib"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="renderman"
-                       headerPath="/home/ibalab/.conda/envs/patch/include/python3.7m"
-                       libraryPath="/home/ibalab/.conda/envs/patch/lib"/>
+                       headerPath="/home/ibalab/.conda/envs/patch/include" libraryPath="/home/ibalab/.conda/envs/patch/lib"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="JuceLibraryCode/modules"/>
